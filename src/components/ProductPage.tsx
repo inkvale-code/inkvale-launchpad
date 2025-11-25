@@ -3,6 +3,7 @@ import { Badge } from "@/components/ui/badge";
 import { Card } from "@/components/ui/card";
 import { CheckCircle2, Download, Star } from "lucide-react";
 import { Helmet } from "react-helmet-async";
+import { Link } from "react-router-dom";
 
 interface ProductFeature {
   title: string;
@@ -88,15 +89,9 @@ const ProductPage = ({
         <nav className="container mx-auto px-4 py-4">
           <ol className="flex items-center space-x-2 text-sm text-muted-foreground">
             <li>
-              <a href="/" className="hover:text-primary transition-colors">
+              <Link to="/" className="hover:text-primary transition-colors">
                 Home
-              </a>
-            </li>
-            <li>/</li>
-            <li>
-              <a href="/products" className="hover:text-primary transition-colors">
-                Products
-              </a>
+              </Link>
             </li>
             <li>/</li>
             <li className="text-foreground font-medium">{title}</li>
